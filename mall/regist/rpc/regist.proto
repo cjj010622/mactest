@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package regist;
+
+option go_package="./regist";
+
+message IdRequest{
+  string id=1;
+}
+
+message RegistRepose{
+  string id=1;
+  string account=2;
+  string pwd=3;
+}
+
+service Regist{
+  rpc getRegist(IdRequest) returns(RegistRepose);
+}

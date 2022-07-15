@@ -1,0 +1,8 @@
+Name: login
+Host: 0.0.0.0
+Port: 8888
+RegistRpc:
+  Etcd:
+    Hosts:
+      - 127.0.0.1:2379
+    Key: regist.rpc

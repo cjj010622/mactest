@@ -1,0 +1,14 @@
+type (
+	LoginReq {
+		Id string `path:"id"`
+	}
+	LoginReply {
+		Id      string `json:"id"`
+		Account string `json:"account"`
+		Pwd     string `json:"pwd"`
+	}
+)
+service login{
+	@handler getLogin
+	get /api/login/get/:id (LoginReq) returns(LoginReply)
+}
